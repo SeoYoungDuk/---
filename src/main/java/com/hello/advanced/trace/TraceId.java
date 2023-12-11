@@ -20,10 +20,10 @@ public class TraceId {
         return UUID.randomUUID().toString().substring(0, 8);
     }
 
-    private TraceId createNextId() {
+    public TraceId createNextId() {
         return new TraceId(id, level + 1);
     }
-    private TraceId createPreviousId() {
+    public TraceId createPreviousId() {
         return new TraceId(id, level - 1);
     }
 
